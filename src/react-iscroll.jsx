@@ -6,7 +6,7 @@ const excludePropNames = ['defer', 'iScroll', 'onRefresh', 'options']
 // Events available on iScroll instance
 // {`react component event name`: `iScroll event name`}
 const availableEventNames = {}
-const iScrollEventNames = ['beforeScrollStart', 'scrollCancel', 'scrollStart', 'scroll', 'scrollEnd', 'flick', 'zoomStart', 'zoomEnd']
+const iScrollEventNames = ['beforeScrollStart', 'scrollCancel', 'scrollStart', 'scroll', 'scrollEnd', 'flick', 'zoomStart', 'zoomEnd', 'reset']
 
 for (let i = 0, len = iScrollEventNames.length; i < len; i++) {
   const iScrollEventName = iScrollEventNames[i]
