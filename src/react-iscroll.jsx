@@ -51,7 +51,13 @@ export default class ReactIScroll extends React.Component {
 
   // There is no state, we can compare only props.
   shouldComponentUpdate(nextProps, nextContext) {
-    return !deepEqual(this.props, nextProps) || !deepEqual(this.context, nextContext)
+    const prev = Object.assign({}, this.ptops);
+	const next = Object.assign({}, nextProps);
+	const prevIScroll = prev.iScroll;
+	const nextIScroll = next.iScroll;
+	delete prev.iScroll;
+	delete next.iScroll;
+    return !deepEqual(prev, next) || !deepEqual(this.context, nextContext) || prevIScroll !== nextIScroll;
   }
 
   // Check if iScroll options has changed and recreate instance with new one
