@@ -1,7 +1,7 @@
 import React from 'react'
 import deepEqual from 'deep-equal'
 
-const excludePropNames = ['defer', 'iScroll', 'onRefresh', 'options']
+const excludePropNames = ['defer', 'iScroll', 'onRefresh', 'options', 'onInitialize']
 
 // Events available on iScroll instance
 // {`react component event name`: `iScroll event name`}
